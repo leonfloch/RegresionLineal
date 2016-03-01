@@ -17,11 +17,11 @@ $ mvn install
 $ heroku local web
 ```
 
-Para correr la aplicación: [localhost:5000](http://localhost:5000/).
+Para correr la aplicación: [localhost:5000](http://localhost:5000/)
 
 ## Correr en Heroku
 
-[programa3-49766.herokuapp.com](programa3-49766.herokuapp.com)
+[programa3-49766.herokuapp.com](http://programa3-49766.herokuapp.com)
 
 
 
