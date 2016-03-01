@@ -1,8 +1,8 @@
 # Programa 3
 
-A barebones Java app, which can easily be deployed to Heroku.
+Assignment Kit for Program 3
 
-This application support the [Getting Started with Java on Heroku](https://devcenter.heroku.com/articles/getting-started-with-java) article - check it out.
+Personal Software Process (PSP)
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
@@ -21,7 +21,7 @@ Para correr la aplicación: [localhost:5000](http://localhost:5000/).
 
 ## Correr en Heroku
 
-[correr](programa3-49766.herokuapp.com)
+[programa3-49766.herokuapp.com](programa3-49766.herokuapp.com)
 
 
 
@@ -30,14 +30,6 @@ Para correr la aplicación: [localhost:5000](http://localhost:5000/).
 ```sh
 $ heroku git:clone -a programa3-49766
 $ cd programa3-49766
-```
-
-## Deploying to Heroku
-
-```sh
-$ heroku create
-$ git push heroku master
-$ heroku open
 ```
 
 ## Documentación
