@@ -30,15 +30,11 @@ public class Regresion {
     private static final String ACTUAL_DEVEP_HOURS = "data/ActualDevelopmentHours.txt";
     
     /**
-     * 
+     * indica el tamano del programa 11
      */
-    private static final double xK = 386;
+    private static final double ESTIMACION = 386;
     
     
-//    public static void main( String[] args ) {
-//        Regresion reg = new Regresion();
-//        reg.iniciarCalculos();
-//    }
 
     /**
      * Se toma la informacion de los archivos y se realiza el calculos
@@ -105,18 +101,10 @@ public class Regresion {
         double param0 = promedioY - param1 * promedioX;
         
         //calulo yk
-        double yk = param0 + (param1 * xK);
-        
-        Resultado resultado = new Resultado(param0, param0, promedioY, promedioY, yk);
-        
+        double yk = param0 + (param1 * ESTIMACION);
+                        
+        Resultado resultado = new Resultado(param0, param1, rXy, rCuadrado, yk);        
         return resultado;
     }
-    
-    
-    
-    
-    
-    
-    
     
 }

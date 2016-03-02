@@ -3,14 +3,20 @@ package edu.uniandes.ecos.regresion.mundo;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import sun.management.counter.Units;
+
 
 /**
  * Se definen los cuatro casos de test a probar
  * @author Leonardo Valbuena Calderon
  * @date 19/02/2016
  */
-public class RegresionTest extends TestCase
-{
+public class RegresionTest extends TestCase {
+    
+    
+    
+    
+    
     /**
      * Create the test case
      *
@@ -23,10 +29,10 @@ public class RegresionTest extends TestCase
     /**
      * @return the suite of tests being tested
      */
-    public static Test suite()
-    {
-        return new TestSuite( RegresionTest.class );
-    }
+//    public static Test suite()
+//    {
+//        return new TestSuite( RegresionTest.class );
+//    }
 
     /**
      * Rigourous Test :-)
@@ -34,5 +40,11 @@ public class RegresionTest extends TestCase
     public void testApp()
     {
         assertTrue( true );
+    }
+    
+    
+    
+    public void test1() {
+        assertEquals("1", "1");
     }
 }

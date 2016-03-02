@@ -95,6 +95,7 @@ public class Cal {
      * @param valoresY datos a calcular
      * @return resultado de la sumatoria
      */
+    //@METODO
     public static double sumMultiplicacion(LinkedList valoresX, 
             LinkedList valoresY) {
         double resultado = 0;        

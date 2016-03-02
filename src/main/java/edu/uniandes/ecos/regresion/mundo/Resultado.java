@@ -8,61 +8,48 @@ package edu.uniandes.ecos.regresion.mundo;
 public class Resultado {
     
     /**
-     * 
+     * parametro B0
      */
     private double parametroCero;
     
     /**
-     * 
+     * parametro B1
      */
     private double parametroUno;
     
     /**
-     * 
+     * Correlacion coeficientes r x,y
      */
-    private double coeficiente;
+    private double coeficienteRxy;
     
     /**
-     * 
+     * Correlacion coeficientes r 2
+     */
+    private double coeficienteR2;
+    
+    /**
+     * Calculo prediccion mejorada
      */
     private double prediccion;
-    
-    /**
-     * 
-     */
-    private double yk;
 
     /**
      * Constructor
      * @param parametroCero
      * @param parametroUno
-     * @param coeficiente
-     * @param prediccion
-     * @param yk 
-     */
-    public Resultado(double parametroCero, double parametroUno, double coeficiente, double prediccion, double yk) {
-        this.parametroCero = parametroCero;
-        this.parametroUno = parametroUno;
-        this.coeficiente = coeficiente;
-        this.prediccion = prediccion;
-        this.yk = yk;
-    }
-    
-    
-    
-    
-
-    /**
-     * Constructor
+     * @param coeficienteRxy
+     * @param coeficienteR2
+     * @param prediccion 
      */
     //@METODO
-    public Resultado() {
-        
+    public Resultado(double parametroCero, double parametroUno, double coeficienteRxy, 
+            double coeficienteR2, double prediccion) {
+        this.parametroCero = parametroCero;
+        this.parametroUno = parametroUno;
+        this.coeficienteRxy = coeficienteRxy;
+        this.coeficienteR2 = coeficienteR2;
+        this.prediccion = prediccion;
     }
-    
-    
-    
-    
+
     
 
     /**
@@ -71,7 +58,7 @@ public class Resultado {
      */
     //@METODO
     public double getParametroCero() {
-        return parametroCero;
+        return this.redondeo(parametroCero);
     }
 
     /**
@@ -89,7 +76,7 @@ public class Resultado {
      */
     //@METODO
     public double getParametroUno() {
-        return parametroUno;
+        return this.redondeo(parametroUno);
     }
 
     /**
@@ -106,17 +93,35 @@ public class Resultado {
      * @return 
      */
     //@METODO
-    public double getCoeficiente() {
-        return coeficiente;
+    public double getCoeficienteRxy() {
+        return this.redondeo(coeficienteRxy);
     }
 
     /**
      * 
-     * @param coeficiente 
+     * @param coeficienteRxy 
      */
     //@METODO
-    public void setCoeficiente(double coeficiente) {
-        this.coeficiente = coeficiente;
+    public void setCoeficienteRxy(double coeficienteRxy) {
+        this.coeficienteRxy = coeficienteRxy;
+    }
+
+    /**
+     * 
+     * @return 
+     */
+    //@METODO
+    public double getCoeficienteR2() {
+        return this.redondeo(coeficienteR2);
+    }
+
+    /**
+     * 
+     * @param coeficienteR2 
+     */
+    //@METODO
+    public void setCoeficienteR2(double coeficienteR2) {
+        this.coeficienteR2 = coeficienteR2;
     }
 
     /**
@@ -125,7 +130,7 @@ public class Resultado {
      */
     //@METODO
     public double getPrediccion() {
-        return prediccion;
+        return this.redondeo(prediccion);
     }
 
     /**
@@ -136,23 +141,16 @@ public class Resultado {
     public void setPrediccion(double prediccion) {
         this.prediccion = prediccion;
     }
-
+    
     /**
-     * 
+     * realiza redondeo a 4 cifras
+     * @param valor
      * @return 
      */
     //@METODO
-    public double getYk() {
-        return yk;
-    }
-
-    /**
-     * 
-     * @param yk 
-     */
-    //@METODO
-    public void setYk(double yk) {
-        this.yk = yk;
+    public double redondeo(double valor) {
+        int cifras=(int) Math.pow(10,4);
+        return Math.rint(valor * cifras) / cifras;
     }
     
     
